@@ -9,11 +9,11 @@ Business website and lead-generation system for a personalised gifting service.
 **Name:** Effulgent  
 **Previous working name:** Miss Surpriser  
 **Primary contact:** WhatsApp  
-**Phone:** +61 493 692 272  
-**Service area:** Adelaide and surrounding areas  
-**ABN:** 73773865399
+**Phone:** +64 221260952  
+**Service area:** Auckland and surrounding areas  
+**NZBN:** 651418152181
 
-> Confirm the legal business name, ABN, phone number, service area, and final brand spelling before launch.
+> Confirm the legal business name, NZBN, phone number, service area, and final brand spelling before launch.
 
 ---
 
@@ -147,7 +147,7 @@ The header must remain easy to access on desktop and mobile.
 
 ## Global Footer
 
-> © 2026 Effulgent ABN: 73773865399
+> © 2026 Effulgent NZBN: 651418152181
 
 Footer links:
 
@@ -242,7 +242,7 @@ Footer links:
 
 **Price:**
 
-> From $49
+> From NZ$49
 
 **Includes:**
 
@@ -254,7 +254,7 @@ Footer links:
 
 **Price:**
 
-> From $95
+> From NZ$95
 
 **Includes:**
 
@@ -267,7 +267,7 @@ Footer links:
 
 **Price:**
 
-> From $149
+> From NZ$149
 
 **Includes:**
 
@@ -306,7 +306,7 @@ Footer links:
 
 ### FAQ 3: Where do you deliver?
 
-> I deliver within Adelaide and surrounding areas.
+> I deliver within Auckland and surrounding areas.
 
 ### FAQ 4: Can the surprise be anonymous?
 
@@ -417,9 +417,9 @@ Convert businesses into seasonal corporate gifting customers by presenting curat
 
 | Quantity | Includes | Price per Gift |
 |---|---|---:|
-| 5–9 gifts | Choice of box, festive wrapping, delivery coordination | $55 |
-| 10–19 gifts | Choice of box, festive wrapping, personalised card, delivery | $45 |
-| 20+ gifts | Choice of box, festive wrapping, personalised card, priority delivery | $38 |
+| 5–9 gifts | Choice of box, festive wrapping, delivery coordination | NZ$55 |
+| 10–19 gifts | Choice of box, festive wrapping, personalised card, delivery | NZ$45 |
+| 20+ gifts | Choice of box, festive wrapping, personalised card, priority delivery | NZ$38 |
 
 ### Availability Note
 
@@ -428,7 +428,7 @@ Convert businesses into seasonal corporate gifting customers by presenting curat
 ### Pricing Requirements
 
 - Make the three quantity tiers easy to compare.
-- Display the $45 tier as the most attractive middle option.
+- Display the NZ$45 tier as the most attractive middle option.
 - Explain what is included at every tier.
 - Avoid hidden costs.
 - Confirm whether delivery limits or minimum delivery charges apply before launch.
@@ -449,25 +449,25 @@ Convert businesses into seasonal corporate gifting customers by presenting curat
 
 > Printed tag on every gift.
 
-**Add-on price:** +$3
+**Add-on price:** +NZ$3
 
 ### Branded Ribbon & Wrapping
 
 > Colour-matched to your brand.
 
-**Add-on price:** +$5
+**Add-on price:** +NZ$5
 
 ### Personalised Recipient Cards
 
 > Handwritten name & message.
 
-**Add-on price:** +$2
+**Add-on price:** +NZ$2
 
 ### Custom Item Selection
 
 > Dietary needs & preferences.
 
-**Add-on price:** +$7
+**Add-on price:** +NZ$7
 
 ### Custom Branding Note
 
@@ -491,7 +491,7 @@ Convert businesses into seasonal corporate gifting customers by presenting curat
 
 ### Button
 
-> WhatsApp +61 493 692 272
+> WhatsApp +64 221260952
 
 ### Closing Note
 
@@ -554,9 +554,9 @@ Help customers estimate a gifting order and send the details directly to Effulge
 
 ### Pricing Logic
 
-- 5–9 gifts: $55 per gift
-- 10–19 gifts: $45 per gift
-- 20+ gifts: $38 per gift
+- 5–9 gifts: NZ$55 per gift
+- 10–19 gifts: NZ$45 per gift
+- 20+ gifts: NZ$38 per gift
 
 ### Calculator Rules
 
@@ -579,10 +579,10 @@ The final production implementation must validate this logic server-side or thro
 
 ### Options
 
-- Company Logo Tag (+$3/gift)
-- Branded Ribbon & Wrapping (+$5/gift)
-- Personalised Recipient Cards (+$2/gift)
-- Custom Item Selection (+$7/gift)
+- Company Logo Tag (+NZ$3/gift)
+- Branded Ribbon & Wrapping (+NZ$5/gift)
+- Personalised Recipient Cards (+NZ$2/gift)
+- Custom Item Selection (+NZ$7/gift)
 
 ### Add-on Calculation
 
@@ -595,15 +595,15 @@ estimated_total += quantity * selected_addon_prices
 
 **Selected package:**
 
-> Wine & Nibbles Box × 10 ($45/gift)
+> Wine & Nibbles Box × 10 (NZ$45/gift)
 
 **Subtotal:**
 
-> $450
+> NZ$450
 
 **Estimated total:**
 
-> $450
+> NZ$450
 
 ---
 
@@ -624,9 +624,9 @@ Hi Effulgent, I’d like a gifting quote.
 
 Gift box: [selected box]
 Quantity: [number of gifts]
-Price per gift: $[price]
+Price per gift: NZ$[price]
 Add-ons: [selected add-ons]
-Estimated total: $[total]
+Estimated total: NZ$[total]
 
 Please confirm the final quote and availability.
 ```
@@ -636,7 +636,7 @@ Please confirm the final quote and availability.
 - Validate that quantity is a whole number.
 - Display the minimum order requirement clearly.
 - Update the total immediately when quantity or add-ons change.
-- Format all prices in Australian dollars.
+- Format all prices in New Zealand dollars.
 - Make the quote summary easy to read on mobile.
 - Use a pre-filled WhatsApp link.
 - Do not describe an estimate as a final invoice.
@@ -820,28 +820,23 @@ The visual identity should work consistently across:
 - Mobile layouts
 - Social media graphics
 
-## Brand Board Conflict to Resolve
+## Primary Market
 
-The current website brief lists **Adelaide and surrounding areas**, while the supplied brand journey and moodboard reference **Auckland-focused** messaging and Auckland imagery.
+The primary market is **Auckland, New Zealand**, including surrounding areas.
 
-Before design and development are finalised, confirm one primary market:
-
-- Adelaide, Australia; or
-- Auckland, New Zealand.
-
-Update the following consistently after the decision:
+Update the following consistently across the website and business materials:
 
 - Service area
 - City photography
 - Delivery wording
 - SEO keywords
 - Currency
-- ABN or local business identifier
+- NZBN or local business identifier
 - Phone number
 - Corporate gifting language
 - Legal pages
 
-Do not publish a mix of Adelaide and Auckland positioning.
+Do not publish conflicting market positioning.
 
 ---
 
@@ -849,19 +844,19 @@ Do not publish a mix of Adelaide and Auckland positioning.
 
 ## Home Page SEO Title
 
-> Effulgent | Personalised Gift Shopping, Wrapping & Delivery in Adelaide
+> Effulgent | Personalised Gift Shopping, Wrapping & Delivery in Auckland
 
 ## Home Page Meta Description
 
-> Effulgent makes gifting easy with personalised gift shopping, elegant wrapping, occasion planning, and delivery across Adelaide and surrounding areas.
+> Effulgent makes gifting easy with personalised gift shopping, elegant wrapping, occasion planning, and delivery across Auckland and surrounding areas.
 
 ## Corporate Gifting SEO Title
 
-> Corporate Christmas Gifting in Adelaide | Effulgent
+> Corporate Christmas Gifting in Auckland | Effulgent
 
 ## Corporate Gifting Meta Description
 
-> Effulgent provides curated corporate gift boxes, custom branding, wrapping, and delivery for teams and clients in Adelaide.
+> Effulgent provides curated corporate gift boxes, custom branding, wrapping, and delivery for teams and clients in Auckland.
 
 ## Quote Calculator SEO Title
 
@@ -873,14 +868,14 @@ Do not publish a mix of Adelaide and Auckland positioning.
 
 ## Suggested Keywords
 
-- gift shopping Adelaide
-- gift wrapping Adelaide
-- gift delivery Adelaide
-- personalised gifts Adelaide
-- corporate Christmas gifts Adelaide
+- gift shopping Auckland
+- gift wrapping Auckland
+- gift delivery Auckland
+- personalised gifts Auckland
+- corporate Christmas gifts Auckland
 - corporate gift boxes
-- last-minute gifts Adelaide
-- gift concierge Adelaide
+- last-minute gifts Auckland
+- gift concierge Auckland
 - custom corporate gifting
 
 ## Technical SEO
@@ -997,7 +992,7 @@ Only publish a guaranteed response time if the business can consistently meet it
 Before launch, confirm and publish:
 
 - Correct legal business name
-- ABN accuracy
+- NZBN accuracy
 - Privacy policy
 - Terms of service
 - Delivery area
@@ -1056,12 +1051,12 @@ The website must work across:
 Before publishing, review all copy for:
 
 - Brand name consistency: Effulgent
-- Correct Australian spelling
+- Correct New Zealand spelling
 - Correct pricing
 - Correct contact number
 - Correct deadline dates
 - Correct delivery location
-- Correct ABN
+- Correct NZBN
 - Correct legal links
 - Correct WhatsApp destination
 
@@ -1079,7 +1074,7 @@ Do not leave the previous name “Miss Surpriser” anywhere in visible copy, me
 - [ ] Quote calculator copy is approved.
 - [ ] Prices are confirmed.
 - [ ] Corporate deadline is confirmed.
-- [ ] ABN is confirmed.
+- [ ] NZBN is confirmed.
 - [ ] Phone number is confirmed.
 
 ## Functionality
