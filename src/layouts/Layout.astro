@@ -15,7 +15,7 @@ const waMessage = encodeURIComponent('Hi Effulgent, I’d like to enquire about 
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Effulgent home"><img src="/brand/effulgent-wordmark-forest.png" alt="Effulgent" /></a>
+      <a class="brand" href="/" aria-label="Effulgent home"><img src="/brand/effulgent-logo-header.png" alt="Effulgent" /></a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="/#services">Services</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a>
@@ -26,7 +26,7 @@ const waMessage = encodeURIComponent('Hi Effulgent, I’d like to enquire about 
     </header>
     <main><slot /></main>
     <footer class="site-footer">
-      <div class="footer-main"><div><a class="brand brand-light" href="/"><img src="/brand/effulgent-wordmark-forest.png" alt="Effulgent" /></a><p>Your love. Personally delivered.</p></div><div class="footer-links"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a><a href="/corporate-gifting">Corporate Gifting</a></div><div class="footer-contact"><span>Auckland & surrounding areas</span><a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">WhatsApp +64 22 126 0952</a></div></div>
+      <div class="footer-main"><div><a class="brand brand-light" href="/"><img src="/brand/effulgent-logo-header.png" alt="Effulgent" /></a><p>Your love. Personally delivered.</p></div><div class="footer-links"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a><a href="/corporate-gifting">Corporate Gifting</a></div><div class="footer-contact"><span>Auckland & surrounding areas</span><a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">WhatsApp +64 22 126 0952</a></div></div>
       <div class="footer-bottom"><span>© 2026 Effulgent NZBN: 71571527304127</span><span>Thoughtful gestures. Lasting connections.</span></div>
     </footer>
     <script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.site-nav');toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});document.querySelectorAll('[data-track]').forEach(el=>el.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('effulgent:track',{detail:el.dataset.track}))));</script>
