@@ -1,6 +1,7 @@
 ---
 const { title = 'Effulgent | Thoughtful gifting, personally delivered', description = 'Effulgent makes gifting easy with personalised gift shopping, elegant wrapping, occasion planning, and delivery across Auckland and surrounding areas.', active = '' } = Astro.props;
 const wa = '64221260952';
+const profileUrl = 'https://share.google/1V3xSajYzyfGT5OI3';
 const site = Astro.site ?? new URL('https://unique-belekoy-cd7b14.netlify.app');
 const canonical = new URL(Astro.url.pathname, site).toString();
 const ogImage = new URL('/brand/effulgent-wordmark-forest.png', site).toString();
@@ -14,6 +15,7 @@ const localBusiness = {
   areaServed: { '@type': 'City', name: 'Auckland' },
   address: { '@type': 'PostalAddress', addressLocality: 'Auckland', addressCountry: 'NZ' },
   identifier: { '@type': 'PropertyValue', propertyID: 'NZBN', value: '651418152181' },
+  sameAs: [profileUrl],
   description,
 };
 ---
@@ -52,7 +54,7 @@ const localBusiness = {
     </header>
     <main><slot /></main>
     <footer class="site-footer">
-      <div class="footer-main"><div><a class="brand brand-light footer-logo" href="/"><img src="/brand/effulgent-footer-logo.png" alt="Effulgent" /></a><p>Your love. Personally delivered.</p></div><div class="footer-links"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a><a href="/corporate-gifting">Corporate Gifting</a></div><div class="footer-contact"><span>Auckland & surrounding areas</span><a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">WhatsApp +64 22 126 0952</a><a href="tel:+64221260952">Call +64 22 126 0952</a></div></div>
+      <div class="footer-main"><div><a class="brand brand-light footer-logo" href="/"><img src="/brand/effulgent-footer-logo.png" alt="Effulgent" /></a><p>Your love. Personally delivered.</p></div><div class="footer-links"><a href="/terms">Terms of Service</a><a href="/privacy">Privacy Policy</a><a href="/corporate-gifting">Corporate Gifting</a></div><div class="footer-contact"><span>Auckland & surrounding areas</span><a href={`https://wa.me/${wa}`} target="_blank" rel="noreferrer">WhatsApp +64 22 126 0952</a><a href="tel:+64221260952">Call +64 22 126 0952</a><a href={profileUrl} target="_blank" rel="noreferrer">Google Business Profile ↗</a></div></div>
       <div class="footer-bottom"><span>© 2026 Effulgent NZBN: 651418152181</span><span>Thoughtful gestures. Lasting connections.</span></div>
     </footer>
     <script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.site-nav');toggle?.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});document.querySelectorAll('[data-track]').forEach(el=>el.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('effulgent:track',{detail:el.dataset.track}))));</script>
