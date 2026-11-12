@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout active="quote" title="Gift Quote Calculator | Effulgent" description="Build an instant gifting estimate by selecting a gift box, quantity, and optional customisation add-ons.">
+  <section class="page-hero"><div class="page-hero-inner"><span class="eyebrow">Instant Quote</span><h1>Build your gifting quote</h1><p>Pick your box, quantity, and any add-ons — see your total instantly, then send it straight to us.</p></div></section>
+  <section class="section"><div class="section-inner"><div class="calculator"><div class="calc-card">
+    <div><div class="step-label"><span class="step-number">1</span>Choose your box</div><div class="choices"><div class="choice"><input id="box-wine" type="radio" name="box" value="Wine & Nibbles Box" checked /><label for="box-wine">Wine & Nibbles Box</label></div><div class="choice"><input id="box-selfcare" type="radio" name="box" value="Self-Care Box" /><label for="box-selfcare">Self-Care Box</label></div><div class="choice"><input id="box-coffee" type="radio" name="box" value="Coffee Lover’s Box" /><label for="box-coffee">Coffee Lover’s Box</label></div><div class="choice"><input id="box-gourmet" type="radio" name="box" value="Premium Gourmet Box" /><label for="box-gourmet">Premium Gourmet Box</label></div></div></div>
+    <div><div class="step-label"><span class="step-number">2</span>How many gifts?</div><div class="quantity-control"><button type="button" id="decrease" aria-label="Decrease quantity">−</button><input id="quantity" type="number" min="1" step="1" value="10" aria-describedby="quantity-error" /><button type="button" id="increase" aria-label="Increase quantity">+</button></div><p id="quantity-error" class="error-message" role="alert"></p></div>
+    <div><div class="step-label"><span class="step-number">3</span>Add-ons</div><div class="checklist"><label><input type="checkbox" value="Company Logo Tag" data-price="3" /> Company Logo Tag <span>+NZ$3/gift</span></label><label><input type="checkbox" value="Branded Ribbon & Wrapping" data-price="5" /> Branded Ribbon & Wrapping <span>+NZ$5/gift</span></label><label><input type="checkbox" value="Personalised Recipient Cards" data-price="2" /> Personalised Recipient Cards <span>+NZ$2/gift</span></label><label><input type="checkbox" value="Custom Item Selection" data-price="7" /> Custom Item Selection <span>+NZ$7/gift</span></label></div></div>
+  </div><aside class="summary-card"><h2>Your estimate</h2><div class="summary-line"><span>Gift box</span><strong id="summary-box">Wine & Nibbles Box</strong></div><div class="summary-line"><span>Quantity</span><strong id="summary-quantity">10 gifts</strong></div><div class="summary-line"><span>Price per gift</span><strong id="summary-price">NZ$45</strong></div><div class="summary-line"><span>Add-ons</span><strong id="summary-addons">None</strong></div><div class="summary-total"><span>Estimated total</span><strong id="summary-total">NZ$450</strong></div><a id="quote-whatsapp" class="btn" data-track="whatsapp_quote_click" href="#" target="_blank" rel="noreferrer">Send this quote via WhatsApp <span>↗</span></a><p class="disclaimer">This is an estimate. Custom branding requires 10+ gifts and 7 business days’ lead time. Final quote confirmed after we discuss your requirements.</p></aside></div></div></section>
+</Layout>
+<script>
+  const quantity = document.querySelector('#quantity');
+  const error = document.querySelector('#quantity-error');
+  const summaryBox = document.querySelector('#summary-box');
+  const summaryQuantity = document.querySelector('#summary-quantity');
+  const summaryPrice = document.querySelector('#summary-price');
+  const summaryAddons = document.querySelector('#summary-addons');
+  const summaryTotal = document.querySelector('#summary-total');
+  const quoteLink = document.querySelector('#quote-whatsapp');
+  const priceFor = (n) => n >= 5 && n <= 9 ? 55 : n >= 10 && n <= 19 ? 45 : n >= 20 ? 38 : 0;
+  const money = (n) => `NZ$${n.toLocaleString('en-NZ')}`;
+  function updateQuote() {
+    const n = Number(quantity.value);
+    const valid = Number.isInteger(n) && n >= 5;
+    const box = document.querySelector('input[name="box"]:checked')?.value || 'Wine & Nibbles Box';
+    const selected = [...document.querySelectorAll('.checklist input:checked')];
+    const addonTotal = selected.reduce((sum, item) => sum + Number(item.dataset.price), 0);
+    const perGift = priceFor(n);
+    summaryBox.textContent = box;
+    summaryQuantity.textContent = `${Number.isFinite(n) ? n : 0} gifts`;
+    summaryAddons.textContent = selected.length ? selected.map((item) => item.value).join(', ') : 'None';
+    if (!valid) { error.textContent = 'Minimum order is 5 gifts. Enter a whole number.'; summaryPrice.textContent = '—'; summaryTotal.textContent = '—'; quoteLink.setAttribute('aria-disabled', 'true'); quoteLink.href = '#'; return; }
+    error.textContent = '';
+    const total = n * (perGift + addonTotal);
+    summaryPrice.textContent = money(perGift);
+    summaryTotal.textContent = money(total);
+    const message = `Hi Effulgent, I’d like a gifting quote.\n\nGift box: ${box}\nQuantity: ${n} gifts\nPrice per gift: ${money(perGift)}\nAdd-ons: ${selected.length ? selected.map((item) => item.value).join(', ') : 'None'}\nEstimated total: ${money(total)}\n\nPlease confirm the final quote and availability.`;
+    quoteLink.href = `https://wa.me/64221260952?text=${encodeURIComponent(message)}`;
+    quoteLink.removeAttribute('aria-disabled');
+  }
+  document.querySelector('#decrease').addEventListener('click', () => { quantity.value = Math.max(1, Number(quantity.value || 1) - 1); updateQuote(); });
+  document.querySelector('#increase').addEventListener('click', () => { quantity.value = Number(quantity.value || 0) + 1; updateQuote(); });
+  document.querySelectorAll('input').forEach((input) => input.addEventListener('input', updateQuote));
+  updateQuote();
+</script>
